@@ -1,0 +1,68 @@
+{
+    "jackson": {
+        "notes": [
+            {
+                "note": "Today I went to class. Math is very fun, please send help. reminds me of <this>",
+                "references": [
+                    "jackson,notes,1"
+                ],
+                "date": {
+                    "time": "7:54:00",
+                    "day": "17",
+                    "year": "2018",
+                    "month": "7"
+                }
+            },
+            {
+                "note": "I think I failed math. you can use *< and *> to make stuff",
+                "references": [],
+                "date": {
+                    "time": "7:54:00",
+                    "day": "17",
+                    "year": "2018",
+                    "month": "6"
+                }
+            },
+            {
+                "note": "hello",
+                "references": [],
+                "date": {
+                    "time": "7:54:01",
+                    "day": "29",
+                    "year": "2018",
+                    "month": "7"
+                }
+            },
+            {
+                "note": "test",
+                "references": [],
+                "date": {
+                    "time": "18:14:47.414604",
+                    "day": "30",
+                    "year": "2018",
+                    "month": "7"
+                }
+            },
+            {
+                "note": "hello",
+                "references": [],
+                "date": {
+                    "time": "18:17:06.591629",
+                    "day": "30",
+                    "year": "2018",
+                    "month": "7"
+                }
+            },
+            {
+                "note": "this is a *<test*>",
+                "references": [],
+                "date": {
+                    "day": "30",
+                    "year": "2018",
+                    "time": "18:17:40.128528",
+                    "month": "7"
+                }
+            }
+        ]
+    }
+}

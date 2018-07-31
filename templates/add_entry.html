@@ -1,0 +1,54 @@
+{%  extends "layout.html" %}
+
+{%  block title %}Entry Page{%  endblock %}
+
+{%  block content %}
+ <h2>Type something</h2>
+<script type="text/javascript">
+  actual=""
+  previous=""
+  function when_pressed() {
+    field=document.getElementById("editting_area").value
+    last_char=field[field.length-1]
+    output=actual
+    if (previous.length<field.length) {
+      if (last_char=="<" || last_char==">") {
+        output += "*"+last_char
+      } else {
+        output += last_char
+      }
+    }
+    else {
+      last_char=output[output.length-1]
+      if (last_char=="<" || last_char==">") {
+        output = output.substring(0,output.length-2)
+      } else {
+        output = output.substring(0,output.length-1)
+      }
+    }
+    actual = output
+    previous=format_actual(actual)
+    document.getElementById("editting_area").value=format_actual(actual)
+  }
+  function format_actual(unfiltered) {
+    filtered=""
+    for (var i = 0; i < unfiltered.length; i++) {
+      if (unfiltered[i]=="*" && i<unfiltered.length-1) {
+        if (unfiltered[i+1]=="<" || unfiltered[i+1]==">") {
+          i++
+        }
+      }
+      filtered += unfiltered[i]
+    }
+    return filtered
+  }
+
+  function change_code() {
+    document.getElementById("editting_area").value = actual
+  }
+</script>
+ <form action="/upload">
+   <textarea name="new_entry" id="editting_area" rows="8" cols="80" oninput="when_pressed()"></textarea>
+   <input type="submit" value="Submit" onclick="change_code()">
+ </form>
+{%  endblock %}
